@@ -3,6 +3,7 @@
 :root{
     --primary-color: #0084fd;
     --lighter-primary-color: #b5ddff;
+    --secondary-color: #9792e4;
     --main-space: 32px;
 }
 
@@ -15,32 +16,69 @@
     padding: 0 calc((var(--main-space)) / 2);
 }
 
+section{
+    margin-top: var(--main-space);
+    margin-bottom: var(--main-space);
+}
+
 .row{
     display: flex;
     flex-wrap: wrap;
     border: 1px dashed red;
-    margin: 0 calc(-1 * ((var(--main-space)) / 3));
+    margin: 0 calc(-1 * ((var(--main-space)) / 4));
 }
 
 .col{
     min-height: 200px;
     flex-basis: 100%;
-    padding: calc(var(--main-space) / 3);
+    padding: calc(var(--main-space) / 4);
 }
+
 .col-content{
     padding: calc(var(--main-space) / 3);
     min-height: 200px;
     border: 1px dashed blue;
     border-radius: 25px;
 }
+
+.testimonial-img-container{
+    width: 150px;
+    height: 150px;
+    margin-right: calc(var(--main-space) / 4) ;
+}
+
+.testimonial-img-container img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.border-radius{
+    border-radius: 25px;
+}
+.d-flex{
+    display: flex;
+}
+
+.col.d-flex{
+    flex-direction: column;
+    align-items: center;
+    margin: calc(var(--main-space) / 4) 0;
+}
+
+/* sezione colori e stili semplici */
 .bg-lightblue{
     background-color: var(--lighter-primary-color);
+}
+.bg-lilla{
+    background-color: var(--secondary-color);
 }
 
 /* stili per l'header */
 
 header{
     background-color: var(--primary-color);
+    margin-bottom: var(--main-space);
 }
 
 
@@ -57,6 +95,18 @@ header{
     .col-2_3{
         flex-basis: 66.6%;
     }
+    .col-1_2{
+        flex-basis: 50%;
+    }
+    .col-1_5{
+        flex-basis: 20%;
+    }
+    .col-4_5{
+        flex-basis: 80%;
+    }
+    .col.d-flex{
+        flex-direction: row;
+    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 919.9px){
@@ -65,5 +115,14 @@ header{
     }
     .col-2_3{
         flex-basis: 66.6%;
+    }
+    .col-1_5{
+        flex-basis: 20%;
+    }
+    .col-4_5{
+        flex-basis: 80%;
+    }
+    .col.d-flex{
+        flex-direction: row;
     }
 }
