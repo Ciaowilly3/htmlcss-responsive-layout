@@ -1,0 +1,69 @@
+/* stili centralizzati riutilizzati in più punti della page */
+
+:root{
+    --primary-color: #0084fd;
+    --lighter-primary-color: #b5ddff;
+    --main-space: 32px;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    padding: 0 calc((var(--main-space)) / 2);
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px dashed red;
+    margin: 0 calc(-1 * ((var(--main-space)) / 3));
+}
+
+.col{
+    min-height: 200px;
+    flex-basis: 100%;
+    padding: calc(var(--main-space) / 3);
+}
+.col-content{
+    padding: calc(var(--main-space) / 3);
+    min-height: 200px;
+    border: 1px dashed blue;
+    border-radius: 25px;
+}
+.bg-lightblue{
+    background-color: var(--lighter-primary-color);
+}
+
+/* stili per l'header */
+
+header{
+    background-color: var(--primary-color);
+}
+
+
+
+/* stili per il responsive */
+@media screen and (min-width: 920px) {
+    .main-container{
+        max-width: 920px;
+        margin: auto;
+    }
+    .col-1_3{
+        flex-basis: 33.3%;
+    }
+    .col-2_3{
+        flex-basis: 66.6%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 919.9px){
+    .col-1_3{
+        flex-basis: 33.3%;
+    }
+    .col-2_3{
+        flex-basis: 66.6%;
+    }
+}
