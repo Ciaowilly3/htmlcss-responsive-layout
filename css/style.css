@@ -26,7 +26,6 @@ section{
     flex-wrap: wrap;
     border: 1px dashed red;
     margin: 0 calc(-1 * ((var(--main-space)) / 4));
-    flex-direction: column;
 }
 
 .col{
@@ -43,16 +42,19 @@ section{
 }
 
 .testimonial-img-container{
+    display: inline-block;
     width: 150px;
     height: 150px;
-    margin-right: calc(var(--main-space) / 4) ;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: calc(var(--main-space) / 4);
 }
 
 .testimonial-img-container img{
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    object-fit: cover;
 }
 .border-radius{
     border-radius: 25px;
@@ -89,6 +91,22 @@ header{
     flex-grow: 1;
 }
 
+/* stili ultima section */
+
+.last-section{
+    padding: 0 calc((var(--main-space)) / 2);
+}
+.last-section .row{
+    justify-content: center;
+    padding: var(--main-space) 0;
+}
+
+/* stili per il footer */
+
+footer{
+    background-color: #333333;
+    padding: var(--main-space) 0;
+}
 /* stili per il responsive */
 @media screen and (min-width: 920px) {
     .main-container{
@@ -97,9 +115,6 @@ header{
     }
     .cards{
         margin: 0;
-    }
-    .row{
-        flex-direction: row;
     }
     .col-1_3{
         flex-basis: 33.3%;
@@ -122,15 +137,15 @@ header{
     .col.d-flex{
         flex-direction: row;
     }
-  
+    .last-section{
+        width: 50%;
+        margin: auto;
+    }
 }
 
 @media screen and (min-width: 480px) and (max-width: 919.9px){
     .cards{
         margin: 0;
-    }
-    .row{
-        flex-direction: row;
     }
     .col-1_3{
         flex-basis: 33.3%;
@@ -149,5 +164,9 @@ header{
     }
     .col-1_3md{
         flex-basis: 50%;
+    }
+    .last-section{
+        width: 70%;
+        margin: auto;
     }
 }
