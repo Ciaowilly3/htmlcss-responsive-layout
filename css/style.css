@@ -26,6 +26,7 @@ section{
     flex-wrap: wrap;
     border: 1px dashed red;
     margin: 0 calc(-1 * ((var(--main-space)) / 4));
+    flex-direction: column;
 }
 
 .col{
@@ -81,7 +82,12 @@ header{
     margin-bottom: var(--main-space);
 }
 
-
+/* stili cards*/
+.cards{
+    min-height: 200px;
+    margin: 0 calc((var(--main-space)) / 3);
+    flex-grow: 1;
+}
 
 /* stili per il responsive */
 @media screen and (min-width: 920px) {
@@ -89,7 +95,16 @@ header{
         max-width: 920px;
         margin: auto;
     }
+    .cards{
+        margin: 0;
+    }
+    .row{
+        flex-direction: row;
+    }
     .col-1_3{
+        flex-basis: 33.3%;
+    }
+    .col-1_3lg{
         flex-basis: 33.3%;
     }
     .col-2_3{
@@ -107,9 +122,16 @@ header{
     .col.d-flex{
         flex-direction: row;
     }
+  
 }
 
 @media screen and (min-width: 480px) and (max-width: 919.9px){
+    .cards{
+        margin: 0;
+    }
+    .row{
+        flex-direction: row;
+    }
     .col-1_3{
         flex-basis: 33.3%;
     }
@@ -124,5 +146,8 @@ header{
     }
     .col.d-flex{
         flex-direction: row;
+    }
+    .col-1_3md{
+        flex-basis: 50%;
     }
 }
