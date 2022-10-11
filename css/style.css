@@ -25,7 +25,7 @@ section{
 .row{
     display: flex;
     flex-wrap: wrap;
-    border: 1px dashed red;
+    /* border: 1px dashed red; */
     margin: 0 calc(-1 * ((var(--main-space)) / 4));
 }
 
@@ -41,7 +41,7 @@ section{
     /* border: 1px dashed blue; */
     border-radius: 25px;
     padding-bottom: var(--main-space);
-    text-align: center;
+    /* text-align: center; */
 }
 
 
@@ -78,12 +78,30 @@ p,li{
     text-align: left;
     line-height: 150%;
 }
+.center-align{
+    text-align: center;
+}
 img{
     display: block;
     width: 100%;
     margin: auto;
 }
-
+h6{
+    text-align: center;
+    margin-bottom: var(--main-space);
+    font-weight: 300;
+}
+h3{
+    text-align: center;
+    margin-bottom: var(--main-space) ;
+    font-size: var(--main-space);
+}
+.padder-top{
+    padding-top: var(--main-space);
+}
+.padder-btm{
+    padding-top: var(--main-space); 
+}
 /* sezione colori e stili semplici */
 .bg-lightblue{
     background-color: var(--lighter-primary-color);
@@ -96,6 +114,9 @@ img{
 }
 .color-white{
     color: white;
+}
+.color-purple{
+    color: var(--secondary-color);
 }
 /* stili per l'header */
 
@@ -198,21 +219,11 @@ header nav button{
     padding: 4px;
 }
 /* terza section */
-h6{
-    text-align: center;
-    margin-bottom: var(--main-space);
-    font-weight: 300;
-}
-h3{
-    text-align: center;
-    margin-bottom: var(--main-space);
-    color: var(--secondary-color);
-    font-size: var(--main-space);
-}
+
 .testimonial-img-container{
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: calc(var(--main-space) / 4);
@@ -234,13 +245,41 @@ h5{
     color: white;
 }
 
-/* stili cards*/
+/* stili cards quarta section*/
 .cards{
-    /* min-height: 200px; */
     margin: 0 calc((var(--main-space)) / 3);
     flex-grow: 1;
-    background-color: white;
+}
+
+.number{
+    font-size: var(--main-space);
+    font-weight: 500;
+}
+
+.cards h4{
+    margin: calc((var(--main-space)) / 2) 0;
+}
+.number + p,
+.cards p{
+    text-align: left;
+    color: black;
     font-weight: 100;
+}
+.cards button{
+    letter-spacing: 3px;
+}
+/* stili quinta section */
+.bigger-p{
+    font-size: 16px;
+    line-height: normal;
+}
+
+.lil-btn{
+    font-weight: 100;
+    font-size: 12px;
+    border: none;
+    width: 140px;
+    padding: 4px 8px;
 }
 
 /* stili ultima section */
@@ -275,10 +314,10 @@ footer{
         flex-basis: 66.6%;
     }
     .col-1_5{
-        flex-basis: 20%;
+        flex-basis: 25%;
     }
     .col-4_5{
-        flex-basis: 80%;
+        flex-basis: 75%;
     }
     .col.d-flex{
         flex-direction: row;
@@ -296,6 +335,9 @@ footer{
     h5{
         text-align: left;
     }
+    .no-wrap-md{
+        flex-wrap: nowrap
+    }
 }
 @media screen and (min-width: 920px) {
     .main-container{
@@ -306,7 +348,7 @@ footer{
         margin: 0;
     }
     .col-1_5{
-        flex-basis: 20%;
+        flex-basis: 15%;
     }
     .col-1_3{
         flex-basis: 33.3%;
@@ -327,7 +369,7 @@ footer{
         flex-basis: 66.6%;
     }
     .col-4_5{
-        flex-basis: 80%;
+        flex-basis: 75%;
     }
     .last-section{
         width: 50%;
