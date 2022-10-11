@@ -145,6 +145,7 @@ header nav button{
     left: auto;
     right: auto;
     width: 65%;
+    overflow: hidden;
 }
 .phone-container{
     display: flex;
@@ -197,7 +198,17 @@ header nav button{
     padding: 4px;
 }
 /* terza section */
-
+h6{
+    text-align: center;
+    margin-bottom: var(--main-space);
+    font-weight: 300;
+}
+h3{
+    text-align: center;
+    margin-bottom: var(--main-space);
+    color: var(--secondary-color);
+    font-size: var(--main-space);
+}
 .testimonial-img-container{
     display: inline-block;
     width: 150px;
@@ -214,12 +225,22 @@ header nav button{
     object-fit: cover;
 }
 
+.thin{
+    font-weight: 100;
+}
+
+h5{
+    text-align: center;
+    color: white;
+}
+
 /* stili cards*/
 .cards{
     /* min-height: 200px; */
     margin: 0 calc((var(--main-space)) / 3);
     flex-grow: 1;
     background-color: white;
+    font-weight: 100;
 }
 
 /* stili ultima section */
@@ -259,13 +280,21 @@ footer{
     .col-4_5{
         flex-basis: 80%;
     }
-    
+    .col.d-flex{
+        flex-direction: row;
+    }
     .last-section{
         width: 70%;
         margin: auto;
     }
     .phone-container{
         display: block;
+    }
+    .left-align-lg{
+        text-align: left;
+    }
+    h5{
+        text-align: left;
     }
 }
 @media screen and (min-width: 920px) {
@@ -338,5 +367,11 @@ footer{
     }
     .img-container{
         width: 100%;
+    }
+    .left-align-lg{
+        text-align: left;
+    }
+    h5{
+        text-align: left;
     }
 }
