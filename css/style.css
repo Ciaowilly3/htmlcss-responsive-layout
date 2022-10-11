@@ -10,6 +10,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .main-container{
@@ -69,6 +70,12 @@ section{
     margin: calc(var(--main-space) / 4) 0;
 }
 
+.btn{
+    border-radius: 25px;
+    border: none;
+    padding: 8px 16px;
+}
+
 /* sezione colori e stili semplici */
 .bg-lightblue{
     background-color: var(--lighter-primary-color);
@@ -81,9 +88,34 @@ section{
 
 header{
     background-color: var(--primary-color);
-    margin-bottom: var(--main-space);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
 }
 
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc((var(--main-space)) / 3) 0;
+}
+
+header nav a{
+    padding: calc((var(--main-space)) / 3) 0;
+}
+
+.fa-bars{
+    color: white;
+}
+
+.lg-menu{
+    display: none;
+}
+
+#spacer{
+    margin-top: calc((var(--main-space)) * 3);
+}
 /* stili cards*/
 .cards{
     min-height: 200px;
@@ -108,6 +140,35 @@ footer{
     padding: var(--main-space) 0;
 }
 /* stili per il responsive */
+
+@media screen and (min-width: 480px) and (max-width: 919.9px){
+    .cards{
+        margin: 0;
+    }
+    .col-1_2md{
+        flex-basis: 50%;
+    }
+    .col-1_3{
+        flex-basis: 33.3%;
+    }
+    .col-2_3{
+        flex-basis: 66.6%;
+    }
+    .col-1_5{
+        flex-basis: 20%;
+    }
+    .col-4_5{
+        flex-basis: 80%;
+    }
+    .col.d-flex{
+        flex-direction: row;
+    }
+    
+    .last-section{
+        width: 70%;
+        margin: auto;
+    }
+}
 @media screen and (min-width: 920px) {
     .main-container{
         max-width: 920px;
@@ -141,32 +202,18 @@ footer{
         width: 50%;
         margin: auto;
     }
-}
-
-@media screen and (min-width: 480px) and (max-width: 919.9px){
-    .cards{
-        margin: 0;
+    #none-lg {
+        display: none;
     }
-    .col-1_3{
-        flex-basis: 33.3%;
+    .lg-menu{
+        display: flex;
+        list-style: none;
+        column-gap: calc((var(--main-space)) / 3);
+        align-items: center;
     }
-    .col-2_3{
-        flex-basis: 66.6%;
-    }
-    .col-1_5{
-        flex-basis: 20%;
-    }
-    .col-4_5{
-        flex-basis: 80%;
-    }
-    .col.d-flex{
-        flex-direction: row;
-    }
-    .col-1_3md{
-        flex-basis: 50%;
-    }
-    .last-section{
-        width: 70%;
-        margin: auto;
+    .lg-menu li a{
+        text-decoration: none;
+        color: white;
+        font-weight: 100;
     }
 }
