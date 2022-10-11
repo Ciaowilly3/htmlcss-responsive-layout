@@ -30,35 +30,23 @@ section{
 }
 
 .col{
-    min-height: 200px;
+    /* min-height: 200px; */
     flex-basis: 100%;
     padding: calc(var(--main-space) / 4);
 }
 
 .col-content{
-    padding: calc(var(--main-space) / 3);
-    min-height: 200px;
-    border: 1px dashed blue;
+    padding: calc(var(--main-space) / 2);
+    /* min-height: 200px; */
+    /* border: 1px dashed blue; */
     border-radius: 25px;
+    padding-bottom: var(--main-space);
+    text-align: center;
 }
 
-.testimonial-img-container{
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: calc(var(--main-space) / 4);
-}
 
-.testimonial-img-container img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 .border-radius{
-    border-radius: 25px;
+    border-radius: 15px;
 }
 .d-flex{
     display: flex;
@@ -71,11 +59,29 @@ section{
 }
 
 .btn{
-    border-radius: 25px;
     border: none;
-    padding: 8px 16px;
+    padding: 8px var(--main-space);
 }
 
+.bg-lightblue h4{
+    color: var(--primary-color);
+}
+p{
+    margin: calc((var(--main-space)) / 2) 0;
+}
+p,li{
+    font-size: 13px;
+    line-height: 150%;
+    text-align: center;
+}
+.left-align{
+    text-align: left;
+    line-height: 150%;
+}
+img{
+    display: block;
+    width: 100%;
+}
 /* sezione colori e stili semplici */
 .bg-lightblue{
     background-color: var(--lighter-primary-color);
@@ -83,7 +89,15 @@ section{
 .bg-lilla{
     background-color: var(--secondary-color);
 }
-
+.bg-white{
+    background-color: white;
+}
+.bg-blue{
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
 /* stili per l'header */
 
 header{
@@ -105,6 +119,11 @@ header nav a{
     padding: calc((var(--main-space)) / 3) 0;
 }
 
+header nav button{
+    padding: 6px 14px;
+    border: none;
+}
+
 .fa-bars{
     color: white;
 }
@@ -116,6 +135,45 @@ header nav a{
 #spacer{
     margin-top: calc((var(--main-space)) * 3);
 }
+
+/* prima section */
+.fa-apple{
+    margin-right: 8px;
+}
+#jumboImg{
+    position: relative;
+    bottom: calc(-1 * var(--main-space));
+    left: auto;
+    right: auto;
+    width: 65%;
+}
+.phone-container{
+    display: flex;
+    justify-content: center;
+}
+.jumbo-icon{
+    color: var(--primary-color);
+    font-size: calc((var(--main-space)) * 2);
+    margin-bottom: calc((var(--main-space)) / 3);
+}
+/* terza section */
+
+.testimonial-img-container{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: calc(var(--main-space) / 4);
+}
+
+.testimonial-img-container img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* stili cards*/
 .cards{
     min-height: 200px;
@@ -160,13 +218,13 @@ footer{
     .col-4_5{
         flex-basis: 80%;
     }
-    .col.d-flex{
-        flex-direction: row;
-    }
     
     .last-section{
         width: 70%;
         margin: auto;
+    }
+    .phone-container{
+        display: block;
     }
 }
 @media screen and (min-width: 920px) {
@@ -177,26 +235,29 @@ footer{
     .cards{
         margin: 0;
     }
+    .col-1_5{
+        flex-basis: 20%;
+    }
     .col-1_3{
         flex-basis: 33.3%;
     }
     .col-1_3lg{
         flex-basis: 33.3%;
     }
-    .col-2_3{
-        flex-basis: 66.6%;
-    }
     .col-1_2{
         flex-basis: 50%;
     }
-    .col-1_5{
-        flex-basis: 20%;
+    .col-1_2lg{
+        flex-basis: 50%;
+    }
+    .col-2_3{
+        flex-basis: 66.6%;
+    }
+    .col-2_3lg{
+        flex-basis: 66.6%;
     }
     .col-4_5{
         flex-basis: 80%;
-    }
-    .col.d-flex{
-        flex-direction: row;
     }
     .last-section{
         width: 50%;
@@ -215,5 +276,11 @@ footer{
         text-decoration: none;
         color: white;
         font-weight: 100;
+    }
+    .d-flex-lg{
+        display: flex;
+    }
+    .col.d-flex{
+        flex-direction: row;
     }
 }
