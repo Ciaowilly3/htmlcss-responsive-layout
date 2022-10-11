@@ -284,20 +284,55 @@ h5{
 
 /* stili ultima section */
 
-.last-section{
-    padding: 0 calc((var(--main-space)) / 2);
+main .last-section{
+    padding: 0 var(--main-space) var(--main-space);
 }
-.last-section .row{
-    justify-content: center;
-    padding: var(--main-space) 0;
+main .last-section h6{
+    padding-top: var(--main-space);
+    margin-bottom: calc((var(--main-space)) / 2);
+    color: rgb(185, 185, 185);
 }
 
+main .last-section h3{
+    color: white;
+}
+
+main .last-section h1{
+    color: #fdc15f;
+    font-size: calc((var(--main-space)) * 2);
+    text-align: center;
+}
+main .last-section p{
+    font-weight: 100;
+    margin-bottom: 0;
+}
+main .last-section button{
+    font-size: 16px;
+    padding: 16px 64px;
+    border: none;
+    border-radius: 32px;
+    font-weight: 500;
+}
+main .last-section div{
+    padding: 16px;
+    text-align: center;
+}
+main .last-section a{
+    color: white;
+}
 /* stili per il footer */
 
 footer{
     background-color: #333333;
-    padding: var(--main-space) 0;
 }
+footer .row{
+    justify-content: center;
+    color: white;
+}
+footer .last-section{
+    padding-bottom: var(--main-space);
+}
+
 /* stili per il responsive */
 
 @media screen and (min-width: 480px) and (max-width: 919.9px){
@@ -323,7 +358,7 @@ footer{
         flex-direction: row;
     }
     .last-section{
-        width: 70%;
+        max-width: 70%;
         margin: auto;
     }
     .phone-container{
@@ -372,7 +407,7 @@ footer{
         flex-basis: 75%;
     }
     .last-section{
-        width: 50%;
+        max-width: 40%;
         margin: auto;
     }
     #none-lg {
